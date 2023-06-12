@@ -9,6 +9,7 @@ import Instructors from "../navItems/Instructors";
 import Classes from "../navItems/Classes";
 import Dashboard from "../navItems/Dashboard";
 import Login from "../navItems/Login";
+import SignUp from "../navItems/SignUp";
 
 
 export const router = createBrowserRouter([
@@ -36,6 +37,10 @@ export const router = createBrowserRouter([
       {
         path:"/login",
         element:<Login></Login>
+      },
+      {
+        path:'/signup',
+        element:<SignUp></SignUp>
       }
     ]
   },
