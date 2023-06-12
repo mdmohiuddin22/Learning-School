@@ -50,3 +50,4 @@ logOut
 };
 
 export default AuthProviders;
+
