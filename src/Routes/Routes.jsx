@@ -10,6 +10,8 @@ import Classes from "../navItems/Classes";
 import Dashboard from "../navItems/Dashboard";
 import Login from "../navItems/Login";
 import SignUp from "../navItems/SignUp";
+import PrivateRoutes from "./PrivateRoutes";
+import Secret from "../navItems/Secret";
 
 
 export const router = createBrowserRouter([
@@ -41,6 +43,10 @@ export const router = createBrowserRouter([
       {
         path:'/signup',
         element:<SignUp></SignUp>
+      },
+      {
+        path:'secret',
+        element:<PrivateRoutes><Secret></Secret></PrivateRoutes>
       }
     ]
   },
