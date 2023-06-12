@@ -1,0 +1,57 @@
+ [
+      {
+        "lessonName": "Arabic Alphabet",
+        "duration": "4 weeks",
+        "instructor": "Ahmed",
+        "materials": [
+          "Arabic alphabet chart",
+          "Workbook"
+        ]
+      },
+      {
+        "lessonName": "Basic Arabic Conversation",
+        "duration": "8 weeks",
+        "instructor": "Fatima",
+        "materials": [
+          "Textbook",
+          "Audio recordings"
+        ]
+      },
+      {
+        "lessonName": "Arabic Grammar",
+        "duration": "12 weeks",
+        "instructor": "Layla",
+        "materials": [
+          "Grammar textbook",
+          "Exercises and worksheets"
+        ]
+      },
+      {
+        "lessonName": "Reading and Writing Arabic",
+        "duration": "10 weeks",
+        "instructor": "Khaled",
+        "materials": [
+          "Reading materials",
+          "Writing practice sheets"
+        ]
+      },
+      {
+        "lessonName": "Arabic Literature",
+        "duration": "16 weeks",
+        "instructor": "Sara",
+        "materials": [
+          "Selected Arabic literary works",
+          "Critical analysis assignments"
+        ]
+      },
+      {
+        "lessonName": "Arabic Translation",
+        "duration": "14 weeks",
+        "instructor": "Youssef",
+        "materials": [
+          "Translation exercises",
+          "Authentic texts for translation"
+        ]
+      }
+    ]
+  
