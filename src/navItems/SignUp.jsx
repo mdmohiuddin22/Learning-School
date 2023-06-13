@@ -1,10 +1,28 @@
+/* eslint-disable react/no-unescaped-entities */
 
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../Providers/AuthProviders";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import { app } from "../firebase/firebase.config";
 
 const SignUp = () => {
+  const auth =getAuth(app);
+  const provider =new GoogleAuthProvider();
+  const from = location.state?.from?.pathname || "/";
+  const navigate = useNavigate();
+  const handleGoogleLogin = () => {
+    signInWithPopup(auth, provider)
+    .then(result =>{
+      const user =result.user;
+      console.log(user);
+      navigate(from, { replace: true });
+    })
+    .catch(error =>{
+      console.log('error', error.message)
+    })
+  };
   const {
     register,
     handleSubmit,
@@ -20,7 +38,7 @@ const SignUp = () => {
     });
   };
 
-  const password = watch("password"); // Get the value of the password field
+  const password = watch("password"); 
 
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -84,14 +102,14 @@ const SignUp = () => {
                 <p className="text-red-600">Password is required</p>
               )}
               {errors.password?.type === "minLength" && (
-                <p className="text-red-600">Password must be 6 characters</p>
+                <p className="text-red-600">is less than 6 characters</p>
               )}
               {errors.password?.type === "maxLength" && (
                 <p className="text-red-600">Password must be less than 20 characters</p>
               )}
               {errors.password?.type === "pattern" && (
                 <p className="text-red-600">
-                  Password must have one uppercase, one lowercase, one number, and one special character
+                  Don't have a capital letter, Don't have a small letter, one number, and don't have a special character
                 </p>
               )}
             </div>
@@ -133,6 +151,14 @@ const SignUp = () => {
               Already have an account? <Link to="/login">Login</Link>
             </small>
           </p>
+          <div className="mt-4">
+          <button
+            className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none"
+            onClick={handleGoogleLogin}
+          >
+            Sign in with Google
+          </button>
+        </div>
         </div>
       </div>
     </div>
