@@ -26,6 +26,10 @@ const Navbar = () => {
       <li>
         <Link to="classes">Classes</Link>
       </li>
+      <li>
+        <Link to="arabicsection">Arabic 
+        Section</Link>
+      </li>
       {user ? (
         <>
           <li>

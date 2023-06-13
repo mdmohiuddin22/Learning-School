@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../Nav+Footer/Navbar";
 import Footer from "../Nav+Footer/Footer";
+import ArabicSection from "../navItems/ArabicSection";
 
 
 const Main = () => {
@@ -11,8 +12,10 @@ const Main = () => {
         <div>
           
          { noHeaderFooter || <Navbar></Navbar> } 
+       
 
           <Outlet></Outlet>
+        
           { noHeaderFooter || <Footer></Footer>}
         </div>
     );
