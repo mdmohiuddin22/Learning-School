@@ -14,8 +14,6 @@ import SignUp from "../navItems/SignUp";
 import PrivateRoutes from "./PrivateRoutes";
 import Secret from "../navItems/Secret";
 import ErrorPage from "../Layout/ErrorPage";
-import ArabicSection from "../navItems/ArabicSection";
-
 export const router = createBrowserRouter([
   {
     path: '*',
@@ -53,11 +51,8 @@ export const router = createBrowserRouter([
       {
         path: 'secret',
         element: <PrivateRoutes><Secret></Secret></PrivateRoutes>
-      },
-      {
-        path:'/arabicsection',
-        element:<ArabicSection></ArabicSection>
       }
+     
    
     ]
   },

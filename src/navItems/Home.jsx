@@ -1,5 +1,7 @@
+
 import Banner from "./Banner/Banner";
 import ArabicLearningPage from "./Classes";
+import ClientReviews from "./ClientReviews";
 import PopularInstructors from "./Instructors";
 
 
@@ -11,7 +13,8 @@ const Home = () => {
         <Banner></Banner>
         <PopularInstructors></PopularInstructors>
         <ArabicLearningPage></ArabicLearningPage>
-        </div>
+       <ClientReviews></ClientReviews>
+               </div>
     );
 };
 
