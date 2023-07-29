@@ -36,6 +36,7 @@ const ClientReviews = () => {
       value={review.rating}
       readOnly
     />
+    <img className='rounded-full h-44 w-44' src={review.image}  />
   <p className='py-8'>{review.details}</p>
   <h3 className='text-2xl text-orange-400'>{review.name}</h3>
 </div>
