@@ -1,0 +1,28 @@
+ [
+      { 
+         "image": "https://i.ibb.co/60dD2X5/Best-teacher.jpg",
+        "title": "Best Teacher",
+        "description": "Some qualities of a good teacher include skills in communication, listening, collaboration, adaptability, empathy and patience.",
+        "see_more_button": "See More"
+      },
+      {
+        "title": "Certificate for Worldwide",
+        "description": "Certifications are awarded by professional organizations to confirm that you have specific knowledge or skills needed to do a job",
+        "see_more_button": "See More",
+        "image": "https://i.ibb.co/ZVJ9vKp/certificate.png"
+      },
+      {
+        "title": "Nice Program",
+        "description": "These descriptions are used to guide course goals, objectives, and student learning outcomes in each curriculum area (i.e., Grammar, Listening, Oral Production",
+        "see_more_button": "See More",
+        "image": "https://i.ibb.co/M90H9VQ/good-program.png"
+      },
+      {
+        "title": "Student Care",
+        "description": "student care centre means any place the principal business of which is providing care or supervision for school-going children or young persons before or after school hours, during school holidays, or both",
+        "see_more_button": "See More",
+        "image": "https://i.ibb.co/9ncLtdj/student-care.jpg"
+      }
+    ]
+  
+  
