@@ -15,9 +15,13 @@ const PopularInstructors = () => {
   const sortedInstructors = instructors.sort((a, b) => b.students - a.students);
 
   return (
-    <div className="flex justify-center">
-      <div className="max-w-lg">
-        <h2 className="text-3xl font-bold mb-4">Popular Instructors</h2>
+    <div className=" flex justify-center">
+      <div className="max-w-lg  justify-center">
+        <h2 className="text-4xl font-bold mb-4 ml-20">Popular <span className="text-orange-400">Instructors</span></h2>
+        <div className="flex justify-center ml-20 mb-6"> 
+        <img src="https://i.ibb.co/1Xxrt3c/240-F-392804645-t-UQxo5-Eg-PXv-FGxn5-OQgu-X1-Bi-Yl-I6l-COV-removebg-preview-1.png" alt="" />
+      </div>
+      <p className="w-1/2 text-center ml-28 mb-10">Arabic is a Central Semitic language, closely related to Aramaic and Hebrew. Standard or Classical Arabic – Fusha – is the distinct form of the language used in media, newspapers, literature, and other formal settings</p>
         <div className="grid grid-cols-3 gap-5">
           {sortedInstructors.slice(0, 6).map((instructor) => (
             <div key={instructor.name} className="bg-white rounded-lg shadow-md">

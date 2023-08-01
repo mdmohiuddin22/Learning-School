@@ -17,7 +17,7 @@ const Navbar = () => {
 
   const navItems = (
     <>
-      <li>
+      <li className="ml-10">
         <Link to="/">Home</Link>
       </li>
       <li>
@@ -38,7 +38,7 @@ const Navbar = () => {
           </li>
         </>
       ) : (
-        <li>
+        <li className="ml-32 btn btn-success ">
           <Link to="login">Login</Link>
         </li>
       )}
@@ -88,12 +88,13 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl font-bold ">
+        <img className="h-20" src="https://i.ibb.co/1Xxrt3c/240-F-392804645-t-UQxo5-Eg-PXv-FGxn5-OQgu-X1-Bi-Yl-I6l-COV-removebg-preview-1.png" alt="" />
+        <a className="btn btn-ghost normal-case text-xl font-bold text-amber-600">
           ARABIC LEARNING SCHOOL
         </a>
       </div>
-      <div className="navbar-center hidden lg:flex text-lg font-semibold">
-        <ul className="menu menu-horizontal px-1">
+      <div className="navbar-center hidden lg:flex text-lg font-semibold ml-56">
+        <ul className="menu menu-horizontal px-1 ml-20">
           {navItems}
         </ul>
       </div>
