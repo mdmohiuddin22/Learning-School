@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const ArabicLearningPage = () => {
@@ -22,12 +23,14 @@ const ArabicLearningPage = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-4xl font-bold mb-8 text-center">Our Popular <span className="text-purple-900">Classes</span></h1>
+     <div>
+       <h1 className="text-4xl font-bold mb-8 text-center">Our Popular <span className="text-purple-900">Classes</span></h1>
 
       <div className="flex justify-center ml-20 mb-6"> 
         <img src="https://i.ibb.co/1Xxrt3c/240-F-392804645-t-UQxo5-Eg-PXv-FGxn5-OQgu-X1-Bi-Yl-I6l-COV-removebg-preview-1.png" alt="" />
       </div>
       <p className="w-1/2 text-center ml-52 mb-10">Arabic is a Central Semitic language, closely related to Aramaic and Hebrew. Standard or Classical Arabic – Fusha – is the distinct form of the language used in media, newspapers, literature, and other formal settings</p>
+     </div>
       <div className="grid grid-cols-3 gap-4">
         {topClasses.map((classItem) => (
           <div key={classItem.id} className="bg-gray-200 p-4 text-center">
@@ -36,7 +39,7 @@ const ArabicLearningPage = () => {
             <p><span className="text-xl font-semibold "> Instructor Name:</span>    {classItem.instructor_name} </p>
             <p> <span className="text-xl font-semibold " >Price :</span>  {classItem.price}</p>
             <p> <span className="text-xl font-semibold ">Total Enrolled  : </span>{classItem.Enrolled}</p>
-            <button className="btn btn-secondary mt-5 h-10 w-56">SELECT CLASS</button>
+            <button className="btn btn-secondary mt-5 h-10 w-56"><Link to="/selectclass">SELECT CLASS</Link> </button>
           </div>
         ))}
       </div>
@@ -45,3 +48,4 @@ const ArabicLearningPage = () => {
 };
 
 export default ArabicLearningPage;
+

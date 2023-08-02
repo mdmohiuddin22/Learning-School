@@ -1,9 +1,10 @@
+import SelectClass from "./SelectClass";
 
 
 const Secret = () => {
     return (
         <div>
-          <h1>secret</h1>  
+         <SelectClass></SelectClass>
         </div>
     );
 };
