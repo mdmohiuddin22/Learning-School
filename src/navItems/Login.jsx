@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import { app } from "../firebase/firebase.config";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const auth =getAuth(app);
@@ -23,6 +24,14 @@ const Login = () => {
     signIn(email, password).then((result) => {
       const user = result.user;
       console.log(user);
+       // Show SweetAlert notification on successful login
+       Swal.fire({
+        icon: "success",
+        title: "Login Successful",
+        text: "You have successfully logged in.",
+      });
+
+
       navigate(from, { replace: true });
     });
   };
@@ -41,6 +50,12 @@ const Login = () => {
       navigate(from, { replace: true });
     })
     .catch(error =>{
+       // Handle login error and show SweetAlert notification
+       Swal.fire({
+        icon: "error",
+        title: "Login Error",
+        text: error.message,
+      });
       console.log('error', error.message)
     })
   };
