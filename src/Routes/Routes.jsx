@@ -8,13 +8,14 @@ import Main from "../Layout/Main";
 import Home from "../navItems/Home";
 import Instructors from "../navItems/Instructors";
 import Classes from "../navItems/Classes";
-import Dashboard from "../navItems/Dashboard";
 import Login from "../navItems/Login";
 import SignUp from "../navItems/SignUp";
 import PrivateRoutes from "./PrivateRoutes";
 import Secret from "../navItems/Secret";
 import ErrorPage from "../Layout/ErrorPage";
 import SelectClass from "../navItems/SelectClass";
+import Dashboard from "../Layout/Dashboard";
+import MyCart from "../Pages/Dashboard/MyCart/MyCart";
 export const router = createBrowserRouter([
   {
     path: '*',
@@ -37,10 +38,7 @@ export const router = createBrowserRouter([
         path: '/classes',
         element: <Classes></Classes>
       },
-      {
-        path: "/dashboard",
-        element: <Dashboard></Dashboard>
-      },
+
       {
         path: "/login",
         element: <Login></Login>
@@ -57,10 +55,19 @@ export const router = createBrowserRouter([
         path:'/selectclass',
         element:<PrivateRoutes><SelectClass></SelectClass></PrivateRoutes>
       }
-     
    
     ]
   },
+  {
+    path:'dashboard',
+    element:<Dashboard></Dashboard>,
+    children:[
+{
+  path:'mycart',
+  element:<MyCart></MyCart>
+}
+    ]
+  }
 ]);
 
 
