@@ -22,7 +22,7 @@ const ArabicLearningPage = () => {
   const topClasses = sortedClasses.slice(0, 6);
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="">
      <div>
        <h1 className="text-4xl font-bold mb-8 text-center">Our Popular <span className="text-purple-900">Classes</span></h1>
 

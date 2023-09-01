@@ -73,7 +73,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar bg-green-400 sticky top-0 z-50">
-      <div className="navbar-start">
+      <div className="">
         <div className="dropdown">
           <label
             tabIndex={0}

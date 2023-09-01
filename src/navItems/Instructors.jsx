@@ -16,7 +16,7 @@ const PopularInstructors = () => {
 
   return (
       <div className=" ">
-      <div className="container mx-auto p-4">
+      <div className="">
       {/* <div className="max-w-lg  justify-center"> */}
         <h2 className="text-4xl font-bold mb-8 text-center">Popular <span className="text-orange-400">Instructors</span></h2>
         <div className="flex justify-center ml-20 mb-6"> 
